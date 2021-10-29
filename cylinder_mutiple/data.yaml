@@ -1,0 +1,5 @@
+train: ./cylinder_mutiple/train/images
+val: ./cylinder_mutiple/valid/images
+
+nc: 1
+names: ['Cylinder']
