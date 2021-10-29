@@ -325,7 +325,7 @@ def detect(save_img=False):
         # Process detections
         first_object = True
         
-        ply_coors =  read_ply("/content/yolov5-single-object-detector/sample_img/3D/" + path.split('/')[-1].split('.')[0] + ".ply")
+        ply_coors =  read_ply("/content/yolov5-object-detector-tracker-for-robotic-arm/sample_img/3D/" + path.split('/')[-1].split('.')[0] + ".ply")
         ply_coors = ply_coors.astype(int)
 
         origin3D =  getTopLeft(ply_coors)
