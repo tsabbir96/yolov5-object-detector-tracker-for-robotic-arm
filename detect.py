@@ -478,7 +478,7 @@ if __name__ == '__main__':
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--view-img', action='store_true', help='display results')
     parser.add_argument('--save-txt', action='store_true', help='save results to *.txt')
-    parser.add_argument('--save-img', action='store_img', help='save result image to Output Path')
+    parser.add_argument('--save-img', action='store_true', help='save result image to Output Path')
     parser.add_argument('--detect-angle', action='store_true', help='detect rotation angle')
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class')
     parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
