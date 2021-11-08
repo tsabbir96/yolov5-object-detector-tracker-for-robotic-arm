@@ -249,8 +249,8 @@ def get_mean_depth(coors, point3D, r):
 
 def detect(save_img=False):
 
-    out, source, weights, half, view_img, save_txt, imgsz, detect_angle = \
-        opt.output, opt.source, opt.weights, opt.half, opt.view_img, opt.save_txt, opt.img_size, opt.detect_angle
+    out, source, weights, half, view_img, save_txt, save_img, imgsz, detect_angle = \
+        opt.output, opt.source, opt.weights, opt.half, opt.view_img, opt.save_txt, opt.save_img, opt.img_size, opt.detect_angle
     webcam = source == '0' or source.startswith('rtsp') or source.startswith('http') or source.endswith('.txt')
 
     ct = CentroidTracker()
@@ -478,6 +478,7 @@ if __name__ == '__main__':
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--view-img', action='store_true', help='display results')
     parser.add_argument('--save-txt', action='store_true', help='save results to *.txt')
+    parser.add_argument('--save-img', action='store_img', help='save result image to Output Path)
     parser.add_argument('--detect-angle', action='store_true', help='detect rotation angle')
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class')
     parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
